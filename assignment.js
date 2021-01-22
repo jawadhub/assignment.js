@@ -32,7 +32,7 @@ else{
 
 
 
-
+// Working on Problem-3 : hotelCost Function
 function hotelCost(perDay){
   var stayDays = 0;
 
