@@ -5,7 +5,7 @@ function kilometerToMeter(kilometer){
   var meter = kilometer * 1000;
   return meter;
 }
-var kilo20 = kilometerToMeter(5);
+
 
 
 
@@ -17,7 +17,7 @@ function budgetCalculator(watch, mobile, laptop,){
   total = itemWatch + itemMobile + itemLaptop;
   return total;
 }
-var addAll = budgetCalculator(1, 1, 1);
+
 
 
 
@@ -25,25 +25,24 @@ var addAll = budgetCalculator(1, 1, 1);
 function hotelCost(perDay){
   var stayDays = 0;
 
-if(perDay <= 10){
-  stayDays = perDay * 100;
+  if(perDay <= 10){
+    stayDays = perDay * 100;
+  }
+  else if(perDay <= 20){
+    var firstPart = 10 * 100;
+    var remaining = perDay - 10;
+    var secondPart = remaining * 80;
+    stayDays = firstPart + secondPart;
+  }
+  else{
+    var firstPart = 10 * 100;
+    var secondPart = 10 * 80;
+    var remaining = perDay - 20;
+    var thirdpart = remaining * 50;
+    stayDays = firstPart + secondPart + thirdpart;
+  }
+  return stayDays;
 }
-else if(perDay <= 20){
-  var firstPart = 10 * 100;
-  var remaining = perDay - 10;
-  var secondPart = remaining * 80;
-  stayDays = firstPart + secondPart;
-}
-else{
-  var firstPart = 10 * 100;
-  var secondPart = 10 * 80;
-  var remaining = perDay - 20;
-  var thirdpart = remaining * 50;
-  stayDays = firstPart + secondPart + thirdpart;
-}
-return stayDays;
-}
-var totalCost = hotelCost(32);
 
 
 
@@ -58,7 +57,7 @@ function megaFriend([a, b, c, xyz]){
   }
   return megaName;
 }
-var result = megaFriend("abir", "mukul", "badal", "ImranKhan");
+
 
 
 
